@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "users": {
+      "fields": {
+        "name": { "type": "string" },
+        "location": { "type": "string" },
+        "currencySymbol": { "type": "string" },
+        "tempUnit": { "type": "string" },
+        "avatarUrl": { "type": "string" }
+      }
+    },
+    "tasks": {
+      "fields": {
+        "title": { "type": "string" },
+        "priority": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "category": { "type": "string" }
+      }
+    },
+    "habits": {
+      "fields": {
+        "name": { "type": "string" },
+        "streaks": { "type": "array" },
+        "targetPerWeek": { "type": "number" }
+      }
+    },
+    "transactions": {
+      "fields": {
+        "title": { "type": "string" },
+        "amount": { "type": "number" },
+        "type": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string" }
+      }
+    },
+    "medications": {
+      "fields": {
+        "name": { "type": "string" },
+        "timeStr": { "type": "string" },
+        "takenToday": { "type": "boolean" }
+      }
+    },
+    "events": {
+      "fields": {
+        "title": { "type": "string" },
+        "dateStr": { "type": "string" },
+        "timeStr": { "type": "string" },
+        "category": { "type": "string" }
+      }
+    }
+  }
+}

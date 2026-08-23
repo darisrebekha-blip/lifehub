@@ -1,0 +1,6 @@
+{
+  "name": "LifeHub",
+  "description": "Personal life dashboard for tasks, habits, water intake, finance, notes, and AI commands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0b0f17;
+    color: #dfe2ee;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: max(884px, 100dvh);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  html.light body {
+    background-color: #f3f5f9;
+    color: #0f172a;
+  }
+}
+
+.glass-header {
+  background: rgba(15, 19, 28, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+html.light .glass-header {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.8);
+}
+
+.micro-border {
+  border: 1px solid #21262D;
+}
+
+html.light .micro-border {
+  border-color: #cbd5e1 !important;
+}
+
+.inner-glow {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+html.light .inner-glow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Light Mode Overrides for Dark Hex Backgrounds & Cards */
+html.light .bg-\[\#181c24\],
+html.light .bg-\[\#1c2028\],
+html.light .bg-\[\#0b0f17\],
+html.light .bg-\[\#262a33\],
+html.light .bg-\[\#1a1e26\] {
+  background-color: #ffffff !important;
+  color: #0f172a;
+}
+
+html.light .bg-\[\#0a0e16\],
+html.light .bg-\[\#10141d\],
+html.light .bg-\[\#0f131c\],
+html.light .bg-\[\#111622\],
+html.light .bg-\[\#121622\],
+html.light .bg-\[\#1f2430\],
+html.light .bg-\[\#31353e\],
+html.light .bg-\[\#10131a\] {
+  background-color: #f8fafc !important;
+  color: #0f172a;
+}
+
+/* Hover background states in light mode */
+html.light .hover\:bg-\[\#262a33\]:hover,
+html.light .hover\:bg-\[\#1f2430\]:hover,
+html.light .hover\:bg-\[\#31353e\]:hover,
+html.light .hover\:bg-\[\#1c2028\]:hover {
+  background-color: #e2e8f0 !important;
+}
+
+/* Gradient card in light mode */
+html.light .bg-gradient-to-r {
+  background: linear-gradient(to right, #eff6ff, #f0f9ff, #f8fafc) !important;
+}
+
+/* Modal overlays in light mode */
+html.light .bg-black\/60,
+html.light .bg-black\/65,
+html.light .bg-black\/70 {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+}
+
+/* Light Mode Text Overrides */
+html.light .text-\[\#dfe2ee\] {
+  color: #0f172a !important;
+}
+
+html.light .text-\[\#c2c6d6\] {
+  color: #334155 !important;
+}
+
+html.light .text-\[\#8c909f\] {
+  color: #64748b !important;
+}
+
+html.light .text-\[\#adc6ff\] {
+  color: #1d4ed8 !important;
+}
+
+html.light .text-\[\#4edea3\] {
+  color: #059669 !important;
+}
+
+html.light .text-\[\#ffb95f\] {
+  color: #d97706 !important;
+}
+
+html.light .text-\[\#ffb4ab\] {
+  color: #dc2626 !important;
+}
+
+html.light .text-\[\#80d5ff\] {
+  color: #0284c7 !important;
+}
+
+/* Light Mode Borders */
+html.light .border-\[\#21262d\],
+html.light .border-\[\#424754\],
+html.light .border-\[\#31353e\],
+html.light .border-\[\#181c24\],
+html.light .border-\[\#adc6ff\]\/30,
+html.light .border-\[\#adc6ff\]\/40 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Form inputs & selects in light mode */
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* SVG ring track in light mode */
+html.light .text-\[\#262a33\] {
+  color: #e2e8f0 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0f131c;
+}
+html.light ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #31353e;
+  border-radius: 10px;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #424754;
+}
